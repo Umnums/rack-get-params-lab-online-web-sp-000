@@ -22,7 +22,7 @@ class Application
         @@cart.each {|x| resp.write "#{x}\n"}
       end
     elsif req.path.match(/add/)
-      search_term = req.params[item]
+      search_term = req.params["item"]
     else
       resp.write "Path Not Found"
     end
